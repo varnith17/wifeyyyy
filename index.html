@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>Happy Birthday Preethi ❤️ | Heart Shape Cake with Rose & Candles</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@1,400;1,700&family=Poppins:wght@400;700&display=swap');
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  html, body {
+    margin: 0; padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffe5ec, #ff88b6);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #6b2e3f;
+    user-select: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  header {
+    margin: 2.5rem 1rem 1rem;
+    text-align: center;
+    width: 100%;
+    max-width: 380px;
+    z-index: 100;
+  }
+  header h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.4rem;
+    margin-bottom: 0.2rem;
+    color: #c94071;
+    text-shadow: 0 0 12px #ff93bb, 2px 2px 9px #a32f63;
+  }
+  header p {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #882d56cc;
+    line-height: 1.5;
+    max-width: 360px;
+    margin: 0 auto 40px;
+    font-style: italic;
+    text-shadow: 0 0 5px #f7a1bf;
+  }
+  #timer {
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: #7a2142;
+    background: #fff2f9cc;
+    padding: 12px 28px;
+    border-radius: 40px;
+    box-shadow: 0 8px 22px rgba(242, 76, 131, 0.5);
+    margin-bottom: 48px;
+    max-width: 95vw;
+    width: max-content;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+  }
+    .cake-wrapper {
+    position: relative;
+    width: 320px;
+    max-width: 90vw;
+    height: 360px;
+    user-select: none;
+    perspective: 1300px;
+    margin-bottom: 3rem;
+  }
+
+  /* Round chocolate heart cake */
+  .cake-heart {
+    position: relative;
+    width: 280px;
+    height: 270px;
+    margin: 0 auto;
+    background:
+      radial-gradient(circle at 68% 38%, #fd6e91 46%, transparent 51%),
+      radial-gradient(circle at 32% 38%, #fd6e91 46%, transparent 51%);
+    background-color: #d51f52;
+    border-radius: 50% / 55%;
+    box-shadow:
+      inset 0 28px 40px rgba(255, 122, 162, 0.85),
+      inset 0 -25px 40px rgba(141, 19, 44, 0.85),
+      0 20px 40px rgba(192, 45, 82, 0.7);
+    overflow: visible;
+    cursor: default;
+    transform: rotateX(18deg) rotateZ(-7deg);
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+    z-index: 10;
+    animation: floatUpDown 5s ease-in-out infinite;
+  }
+  .cake-heart:hover {
+    transform: rotateX(21deg) rotateZ(-3deg) scale(1.07);
+    box-shadow:
+      inset 0 35px 50px rgba(255, 120, 160, 0.95),
+      inset 0 -26px 45px rgba(152, 21, 53, 0.95),
+      0 26px 50px rgba(205, 40, 90, 1);
+  }
+  @keyframes floatUpDown {
+    0%,100% {transform: rotateX(18deg) rotateZ(-7deg) translateY(0);}
+    50% {transform: rotateX(18deg) rotateZ(-7deg) translateY(-6px);}
+  }
+
+  .frosting-ring {
+    position: absolute;
+    top: 26px;
+    left: 50%;
+    width: 260px;
+    height: 230px;
+    border-radius: 140px 140px 88px 88px / 110px 110px 50px 50px;
+    background: radial-gradient(circle at center top, #ffcae1, #ff7ea9);
+    box-shadow:
+      inset 0 15px 28px 2px #ff9ac0,
+      inset 0 -15px 22px 5px #a71955,
+      0 10px 38px 6px #ff6a92bb;
+    transform: translateX(-50%);
+    z-index: 20;
+    animation: softGlow 4s ease-in-out infinite;
+  }
+  @keyframes softGlow {
+    0%,100% {
+      box-shadow:
+        inset 0 15px 28px 2px #ff9ac0,
+        inset 0 -15px 22px 5px #a71955,
+        0 10px 38px 6px #ff6a92bb;
+    }
+    50% {
+      box-shadow:
+        inset 0 21px 32px 3px #ffc9d3,
+        inset 0 -20px 25px 6px #c23a60,
+        0 12px 46px 7px #ffa1b9cc;
+    }
+  }
+
+  .drip {
+    position: absolute;
+    bottom: 22px;
+    width: 36px;
+    height: 36px;
+    background: #ffcfe0;
+    border-radius: 0 0 19px 19px;
+    box-shadow:
+      inset 0 7px 8px #ee8caa,
+      0 6px 11px rgba(233,98,143,0.85);
+    filter: drop-shadow(0 3px 4px #ffbbc7cc);
+  }
+  .drip:nth-child(1) { left: 18px; }
+  .drip:nth-child(2) { left: 75px; height: 50px; bottom: 18px; }
+  .drip:nth-child(3) { left: 122px; height: 42px; bottom: 20px; }
+  .drip:nth-child(4) { left: 180px; height: 53px; bottom: 17px; }
+  .drip:nth-child(5) { left: 220px; height: 40px; bottom: 22px; }
+
+  .cake-text {
+    position: absolute;
+    width: 260px;
+    left: 50%;
+    top: 85px;
+    transform: translateX(-50%);
+    user-select: none;
+    z-index: 190;
+    pointer-events: none;
+    color: #fff;
+    text-shadow:
+      1px 1px 5px #b32c57,
+      0 0 8px #ff799a;
+    font-weight: 700;
+    text-align: center;
+  }
+  .cake-text .line1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.6rem;
+    margin: 0 0 3px;
+  }
+  .cake-text .line2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.2rem;
+  }
+  .cake-text .line2 .heart {
+    color: #ff5f8c;
+    margin-left: 6px;
+  }
+  /* Candles container */
+  .candles {
+    position: absolute;
+    bottom: 250px;
+    left: 50%;
+    width: 283px;
+    max-width: 90vw;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 200;
+  }
+  .candles .candle {
+    position: relative;
+    width: 16px;
+    height: 65px;
+    background: linear-gradient(145deg, #ffc75e, #cd9d25);
+    border-radius: 7px;
+    box-shadow: inset 0 6px 11px #c2aa2e, 0 2px 5px rgba(47, 40, 5, 0.25);
+    filter: drop-shadow(0 2px 4px #b99d3f);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    user-select: none;
+    transition: transform 0.28s ease;
+  }
+  .candles .candle:hover {
+    transform: translateY(-6px);
+  }
+  .candles .candle::after {
+    content: '';
+    position: absolute;
+    top: 42px;
+    left: 5px;
+    width: 7px;
+    height: 10px;
+    background: #fff9a3;
+    border-radius: 3px;
+    box-shadow: inset 0 3px 6px #fce776;
+  }
+  .candles .flame {
+    position: relative;
+    width: 13px;
+    height: 25px;
+    background: radial-gradient(circle at center, #fff900 52%, #fc7f00 88%, transparent 92%);
+    border-radius: 48% 48% 65% 65% / 72% 72% 85% 85%;
+    filter: drop-shadow(0 0 15px #ffb936);
+    animation: flicker 1.3s infinite alternate ease-in-out;
+    margin-top: -46px;
+  }
+  .candles .flame::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    width: 7px;
+    height: 18px;
+    border-radius: 50% 50% 75% 75% / 95% 95% 90% 90%;
+    background: radial-gradient(circle at center, #fffed7 45%, #ff4600 90%, transparent 95%);
+    transform: translateX(-50%) rotate(-18deg);
+    filter: drop-shadow(0 0 7px #ff8f18);
+  }
+  @keyframes flicker {
+    0%, 100% { opacity: 1; transform: translateX(0) scale(1); filter: drop-shadow(0 0 15px #ffb936); }
+    50% { opacity: 0.7; transform: translateX(-2px) scale(0.95); filter: drop-shadow(0 0 9px #ee8f0f); }
+  }
+
+  /* Red rose graphic on cake */
+  .cake-rose {
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 110px;
+    z-index: 100;
+    background: 
+      radial-gradient(circle at 60% 30%, #c7263e 20%, transparent 40%),
+      radial-gradient(circle at 40% 30%, #d0354a 20%, transparent 40%),
+      radial-gradient(circle at center, #a91e2f 35%, #67151f 85%);
+    border-radius: 50% 50% 45% 45% / 70% 70% 80% 80%;
+    box-shadow:
+      inset 0 10px 8px #8a1725,
+      0 6px 8px 4px #9e2f47cc;
+    animation: subtleGlow 3.5s ease-in-out infinite;
+  }
+
+  /* Diamond ring popup */
+  #ringPopup {
+    position: absolute;
+    bottom: 140px;
+    left: calc(50% + 70px);
+    width: 130px;
+    height: 150px;
+    background: linear-gradient(135deg, #dce0e6, #a9aeb4);
+    border-radius: 40px 40px 90px 90px / 55px 55px 95px 95px;
+    box-shadow:
+      inset 0 20px 22px #f2f4fa,
+      0 18px 48px rgba(0, 0, 0, 0.21);
+    transform: translateX(-50%) translateY(220%) scale(0);
+    opacity: 0;
+    transition: transform 1.6s cubic-bezier(0.6,0,0.4,1), opacity 1.6s ease;
+    user-select: none;
+    z-index: 280;
+    pointer-events: none;
+  }
+  #ringPopup.show {
+    transform: translateX(-50%) translateY(-40%) scale(1);
+    opacity: 1;
+    pointer-events: auto;
+    animation: ringPop 1.3s cubic-bezier(0.45, 0, 0.15, 1) forwards;
+  }
+  @keyframes ringPop {
+    0% {transform: translateX(-50%) translateY(220%) scale(0);}
+    60% {transform: translateX(-50%) translateY(-40%) scale(1.2);}
+    85% {transform: translateX(-50%) translateY(-20%) scale(0.95);}
+    100% {transform: translateX(-50%) translateY(-40%) scale(1);}
+  }
+  #ringPopup .band {
+    position: absolute;
+    bottom: 26px;
+    left: 50%;
+    width: 90px;
+    height: 32px;
+    background: linear-gradient(135deg, #a6aec0, #6577a0);
+    border-radius: 18px;
+    transform: translateX(-50%);
+    box-shadow: inset 0 6px 10px #627aa5;
+  }
+  #ringPopup .diamond {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    background:
+      linear-gradient(150deg, #e6f4ff, #9fcdff);
+    clip-path: polygon(50% 0%, 92% 34%, 75% 90%, 25% 90%, 8% 34%);
+    border: 3px solid #7daaff;
+    box-shadow: 0 0 44px #7daaff, inset 0 0 26px #cae4ff;
+    transform: translateX(-50%);
+    filter: drop-shadow(0 0 20px #8eb5ff);
+    animation: sparkle 3s ease-in-out infinite;
+    cursor: default;
+  }
+  @keyframes sparkle {
+    0%, 100% { filter: drop-shadow(0 0 20px #7eb4ff) scale(1); }
+    50% { filter: drop-shadow(0 0 38px #fff) scale(1.12); }
+  }
+
+  /* 'Wear it' button */
+  #wearButton {
+    position: absolute;
+    bottom: -70px;
+    left: calc(50% + 110px);
+    transform: translateX(-50%);
+    background: linear-gradient(145deg, #3b8fec, #205fb3);
+    color: #fff;
+    padding: 15px 42px;
+    border-radius: 34px;
+    font-weight: 700;
+    font-size: 1.3rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 28px rgba(61, 140, 236, 0.85);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.9s ease;
+    user-select: none;
+    z-index: 290;
+  }
+  #wearButton.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  #wearButton:hover {
+    background: linear-gradient(145deg, #205fb3, #3b8fec);
+    box-shadow: 0 10px 36px rgba(61, 169, 250, 1);
+  }
+
+  /* Knife */
+  .knife {
+    position: absolute;
+    width: 230px;
+    height: 48px;
+    top: 150px;
+    left: 50%;
+    background: linear-gradient(170deg, #aab1b6, #575c6c);
+    border-radius: 16px 16px 6px 6px;
+    box-shadow: inset 0 3px 9px #7b848e, 0 7px 58px rgba(80, 90, 100, 0.95);
+    transform-origin: center;
+    transform: translateX(-50%) translateY(-285%) rotate(-38deg);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 1.8s cubic-bezier(0.4,0,0.2,1), opacity 0.3s ease;
+    z-index: 340;
+  }
+  .knife.visible {
+    transform: translateX(-50%) translateY(90px) rotate(-38deg);
+    animation: knifeCut 3.7s forwards;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  @keyframes knifeCut {
+    0%, 20% {transform: translateX(-50%) translateY(90px) rotate(-38deg);}
+    55% {transform: translateX(-50%) translateY(180px) rotate(-38deg);}
+    80% {transform: translateX(-50%) translateY(180px) rotate(-31deg);}
+    100% {transform: translateX(-50%) translateY(90px) rotate(-38deg);}
+  }
+
+  /* Cake slice */
+  .cake-slice {
+    position: absolute;
+    bottom: 60px;
+    width: 150px;
+    height: 165px;
+    background: linear-gradient(135deg, #f8adc7, #b75a8e);
+    border-radius: 110px 36px 63px 63px / 110px 75px 70px 70px;
+    box-shadow: inset 0 16px 38px rgba(190, 78, 121, 0.95), 0 6px 26px rgba(182, 69, 124, 0.65);
+    overflow: hidden;
+    left: 50%;
+    transform: translateX(-50%) translateX(165%);
+    opacity: 0;
+    transition: all 2.3s ease 3.2s;
+    z-index: 350;
+    filter: drop-shadow(0 8px 12px rgba(212, 74, 147, 0.95));
+  }
+  .cake-slice .frosting {
+    border-radius: 70% 30% 45% 45% / 135% 80% 40% 40%;
+    background: radial-gradient(circle at center, #fedbe6, #fb8bbc 75%);
+    box-shadow: inset 0 15px 18px #ffadd6;
+  }
+  .cake-slice.visible {
+    opacity: 1;
+    transform: translateX(-50%) translateX(0);
+  }
+
+  /* Letter popup */
+  #letterPopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 90vw;
+    max-width: 460px;
+    max-height: 80vh;
+    overflow-y: auto;
+    background: radial-gradient(circle at center, #fff2fa 0%, #ffc7dc 100%);
+    border: 6px solid #d6397a;
+    border-radius: 24px;
+    box-shadow: 0 22px 68px rgba(218, 35, 89, 0.95);
+    transform: translate(-50%, 120vh) scale(0.8);
+    opacity: 0;
+    padding: 42px 46px 50px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.18rem;
+    color: #7c0a4a;
+    line-height: 1.6;
+    z-index: 3700;
+    transition: transform 0.95s cubic-bezier(0.45, 0, 0.15, 1), opacity 0.95s ease;
+    user-select: text;
+  }
+  #letterPopup.show {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  #letterPopup h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    margin-bottom: 22px;
+    color: #d9347a;
+    text-shadow: 0 0 26px #ff8aa8;
+    text-align: center;
+  }
+  #letterPopup pre {
+    white-space: pre-wrap;
+    margin: 0;
+  }
+  #letterPopup .close-btn {
+    position: absolute;
+    top: 18px;
+    right: 24px;
+    background: transparent;
+    border: none;
+    font-size: 2.6rem;
+    color: #be2e65;
+    cursor: pointer;
+    font-weight: 700;
+  }
+  #letterPopup .close-btn:hover {
+    color: #ff78ad;
+  }
+</style>
+
+<body>
+<header>
+  <h1>Happy Birthday Varnith's Preethi <span aria-hidden="true">❤️</span></h1>
+  <p>Wishing you a day full of love, laughter, and unforgettable memories!</p>
+</header>
+
+<div id="timer" aria-live="polite" aria-atomic="true" role="timer" tabindex="0">Loading time...</div>
+
+<div class="cake-wrapper" role="img" aria-label="3D heart-shaped chocolate cake with four burning candles and diamond ring" tabindex="-1">
+  <div class="cake-heart" aria-hidden="true">
+    <div class="frosting-top" aria-hidden="true">
+      <div class="drip"></div><div class="drip"></div><div class="drip"></div><div class="drip"></div><div class="drip"></div>
+    </div>
+    <div class="cake-text" aria-hidden="true" role="presentation">
+      <div class="line1">Happy Birthday</div>
+      <div class="line2">Preethi🌹💋🫂 <span class="heart">❤️</span></div>
+    </div>
+  </div>
+
+  <div class="candles" role="list" aria-label="Four burning candles">
+    <div class="candle" role="listitem" aria-label="Candle 1"><div class="flame"></div></div>
+    <div class="candle" role="listitem" aria-label="Candle 2"><div class="flame"></div></div>
+    <div class="candle age-candle" role="listitem" aria-label="Age candle">19<div class="flame"></div></div>
+    <div class="candle" role="listitem" aria-label="Candle 4"><div class="flame"></div></div>
+  </div>
+
+  <div id="ringPopup" role="img" aria-label="Diamond ring" tabindex="-1" aria-hidden="true" style="left: calc(50% + 70px);">
+    <div class="band"></div>
+    <div class="diamond"></div>
+  </div>
+
+  <button id="wearButton" aria-label="It's for you, wear it baby" hidden style="left: calc(50% + 90px);">PRESS IT WIFEYYY ❤️💍🧿</button>
+
+  <div class="knife" id="knife" aria-hidden="true"></div>
+
+  <div class="cake-slice" id="cakeSlice" aria-hidden="true">
+    <div class="frosting" aria-hidden="true"><div class="drip"></div><div class="drip"></div><div class="drip"></div></div>
+  </div>
+</div>
+
+<button id="cutButton" aria-label="Release the Love button" style="padding: 16px 42px; font-size: 1.3rem; border-radius: 36px; background: linear-gradient(145deg,#ff6398,#e33271); color: white; border: none; cursor: pointer; box-shadow: 0 10px 35px rgba(227,50,113,.9); transition: all 0.3s ease; user-select:none;">Release the Love ❤️</button>
+
+<div id="letterPopup" role="dialog" aria-modal="true" aria-labelledby="letterTitle" aria-describedby="letterDesc" hidden>
+  <button class="close-btn" aria-label="Close message">×</button>
+  <h2 id="letterTitle">A Special Message for Preethi ❤️ from Husband Varnith ❤️</h2>
+  <pre id="letterDesc">
+Meh terha husband bestfriend boyfriend sbb kuch hu meh tere andar ka har ek roop janta hu
+Yeh hamara dusra birthday h ek sath Preethiii pichle birthday se iss birthday tak hum kitne memories
+struggles se guzre h woh humko pata h aur jldi shaadi krlo yaar meko agla janam din sath meh banani h
+meko pata h meneh teko bahut baar rulaya dhuk paunchaya par fir bhi tuh mere sath rahi tere jaise insaan na meko milega na meko chayiye
+meko sirf tuh chayiye babyyy humesha sath raho aakhri saase tak aur yeh din se teri khushiyaan baad jaaye mere sath sath
+aur meh teko aur jyada pyaar krta ih rahunga humesha
+TERHA PATI/DOST/PYAAR
+VARNITH'S PREETHI ❤️
+  </pre>
+</div>
+
+<audio controls autoplay>
+  <source src="preethiii.mp3">
+</audio>
+
+<script>
+  const birthday = new Date(2006, 4, 30);
+  const timerEl = document.getElementById('timer');
+  const ringPopup = document.getElementById('ringPopup');
+  const wearButton = document.getElementById('wearButton');
+  const cutButton = document.getElementById('cutButton');
+  const knife = document.getElementById('knife');
+  const cakeSlice = document.getElementById('cakeSlice');
+  const letterPopup = document.getElementById('letterPopup');
+  const closeBtn = letterPopup.querySelector('.close-btn');
+  const candles = document.querySelectorAll('.candles .candle:not(.age-candle)');
+
+  function updateTimer(){
+    const nowUtc = new Date();
+    const ISToffset = 330;
+    const nowIST = new Date(nowUtc.getTime() + (ISToffset + nowUtc.getTimezoneOffset()) * 60000);
+    let delta = Math.floor((nowIST - birthday) / 1000);
+    if(delta < 0){
+      timerEl.textContent = "Happy Birthday!";
+      return;
+    }
+    let years = Math.floor(delta/(365.25*24*3600));
+    delta -= years*365.25*24*3600;
+    let days = Math.floor(delta/(24*3600));
+    delta -= days*24*3600;
+    let hours = Math.floor(delta/3600);
+    delta -= hours*3600;
+    let minutes = Math.floor(delta/60);
+    let seconds = delta - minutes*60;
+    timerEl.textContent = `You have been on this Earth for ${years} years, ${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds (IST).`;
+  }
+  updateTimer();
+  setInterval(updateTimer, 1000);
+
+  function blowCandles() {
+    candles.forEach(candle => {
+      const flame = candle.querySelector('.flame');
+      if (flame) {
+        flame.style.animation = 'blowOut 2.5s forwards';
+      }
+    });
+    // blow age candle's flame
+    const ageFlame = document.querySelector('.candles .age-candle .flame');
+    if(ageFlame) ageFlame.style.animation='blowOut 2.5s forwards';
+  }
+
+  cutButton.onclick = () => {
+    cutButton.disabled = true;
+    cutButton.style.cursor = 'default';
+    
+    knife.classList.add('visible');
+    cakeSlice.classList.add('visible');
+
+    setTimeout(() => {
+      blowCandles();
+      ringPopup.classList.add('show');
+      ringPopup.setAttribute('aria-hidden','false');
+      wearButton.hidden = false;
+      wearButton.classList.add('show');
+      document.getElementById('birthdaySong').play();
+    }, 3500);
+  };
+
+  wearButton.onclick = () => {
+    ringPopup.classList.remove('show');
+    ringPopup.setAttribute('aria-hidden','true');
+    wearButton.classList.remove('show');
+    wearButton.hidden = true;
+
+    letterPopup.hidden = false;
+    setTimeout(() => letterPopup.classList.add('show'), 50);
+  };
+
+  closeBtn.onclick = () => {
+    letterPopup.classList.remove('show');
+    let song = document.getElementById('birthdaySong');
+    song.pause();
+    song.currentTime = 0;
+    setTimeout(() => letterPopup.hidden = true, 600);
+  };
+
+  window.addEventListener('keydown', e => {
+    if(e.key === 'Escape' && !letterPopup.hidden) {
+      letterPopup.classList.remove('show');
+      let song = document.getElementById('birthdaySong');
+      song.pause();
+      song.currentTime = 0;
+      setTimeout(() => letterPopup.hidden = true, 600);
+    }
+  });
+
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes blowOut {
+      0% {opacity:1; transform: scale(1) translateY(0);}
+      50% {opacity:0.5; transform: scale(0.5) translateY(-15px);}
+      100% {opacity:0; transform: scale(0) translateY(-30px);}
+    }
+  `;
+  document.head.appendChild(style);
+</script>
+</body>
+</html>
